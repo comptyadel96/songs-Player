@@ -6,7 +6,13 @@ import {
 } from "react-icons/ai"
 import { BiPauseCircle } from "react-icons/bi"
 
-function MusicControllers({ playNextSong, playPreviousSong, onPlay, onPause }) {
+function MusicControllers({
+  playNextSong,
+  playPreviousSong,
+  onPlay,
+  onPause,
+  showPrevAndNext = true,
+}) {
   const [paused, setPaused] = useState(false)
   const iconsStyle = {
     color: "white",
@@ -19,12 +25,14 @@ function MusicControllers({ playNextSong, playPreviousSong, onPlay, onPause }) {
 
   return (
     <div className="w-72 mt-3 bg-black h-9 flex justify-between items-center px-3">
-      <AiFillFastBackward
-        style={iconsStyle}
-        size={26}
-        className="hover:bg-glass rounded-full w-8"
-        onClick={playPreviousSong}
-      />
+      {showPrevAndNext && (
+        <AiFillFastBackward
+          style={iconsStyle}
+          size={26}
+          className="hover:bg-glass rounded-full w-8"
+          onClick={playPreviousSong}
+        />
+      )}
       <div onClick={toggleIcon}>
         {!paused ? (
           <AiFillCaretRight
@@ -43,12 +51,14 @@ function MusicControllers({ playNextSong, playPreviousSong, onPlay, onPause }) {
         )}
       </div>
 
-      <AiFillFastForward
-        style={iconsStyle}
-        size={26}
-        className="hover:bg-glass rounded-full w-8"
-        onClick={playNextSong}
-      />
+      {showPrevAndNext && (
+        <AiFillFastForward
+          style={iconsStyle}
+          size={26}
+          className="hover:bg-glass rounded-full w-8"
+          onClick={playNextSong}
+        />
+      )}
     </div>
   )
 }

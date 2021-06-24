@@ -56,14 +56,14 @@ function Navbar() {
           you own buisness or make it more interesting ....(add a backend with
           payment method/add animations etc ){" "}
         </p>
-        <div className="mx-auto text-white flex items-center  w-56">
+        <div className="mx-auto text-white flex items-center mt-2 w-56">
           <a
             href="https://github.com/comptyadel96"
             target="_blank"
             rel="noreferrer">
             <GrGithub size={32} />
           </a>
-          <p className="ml-2" > my github</p>
+          <p className="ml-2"> my github</p>
         </div>
       </div>
     </div>

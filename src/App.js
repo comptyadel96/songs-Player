@@ -8,6 +8,7 @@ function App() {
     <Router>
       <div className="w-screen h-screen items-center flex flex-col bg-gradient-to-b from-purple-500 pt-2 ">
         <Navbar />
+        <p className="text-4xl font-semibold text-yellow-300">adel's player 😎 </p>
         <Switch>
           <Route exact path="/">
             <Home />

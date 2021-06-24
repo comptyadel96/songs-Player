@@ -16,10 +16,12 @@ function PlaylistPlayer() {
   }
   // function fire when user click the player's backward icon
   const getPreviousSong = () => {
-    currentSongIndex > 0 && setCurrentSongIndex(currentSongIndex - 1)
+    currentSongIndex > 0
+      ? setCurrentSongIndex(currentSongIndex - 1)
+      : setCurrentSongIndex(songs.length - 1)
   }
   return (
-    <div >
+    <div>
       <MusicPlayer
         title={currentSong.title}
         artist={currentSong.artist}

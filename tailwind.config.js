@@ -26,6 +26,7 @@ module.exports = {
       },
       glass: "rgba(255, 255, 255,0.17)",
       glass2: "rgba(255, 255, 255,0.22)",
+      blackglass:"rgba(0,0,0,0.42)",
       gold: "#ffca31",
       black: colors.black,
       white: colors.white,

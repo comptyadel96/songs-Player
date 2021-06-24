@@ -8,6 +8,7 @@ function MusicPlayer({
   audio,
   playNextSong,
   playPreviousSong,
+  showPrevAndNext = true,
 }) {
   const audioRef = useRef(null)
   const [songDuration, setSongDuration] = useState()
@@ -34,7 +35,7 @@ function MusicPlayer({
   const pauseAudio = () => audioRef.current.pause() // pause the song
 
   return (
-    <div className="w-96 h-72  bg-gray-800  flex flex-col items-center rounded-lg ">
+    <div className="w-96 h-72  bg-gray-800  flex flex-col items-center rounded-lg m-3 ">
       <img
         alt="artist cover"
         src={photo}
@@ -52,6 +53,7 @@ function MusicPlayer({
         playPreviousSong={playPreviousSong}
         onPause={pauseAudio}
         onPlay={playAudio}
+        showPrevAndNext={showPrevAndNext}
       />
       <audio
         src={audio}
