@@ -34,7 +34,7 @@ function MusicPlayer({
   const pauseAudio = () => audioRef.current.pause() // pause the song
 
   return (
-    <div className="w-96 h-72  bg-gray-800 mx-auto flex flex-col items-center rounded-lg ">
+    <div className="w-96 h-72  bg-gray-800  flex flex-col items-center rounded-lg ">
       <img
         alt="artist cover"
         src={photo}
@@ -43,8 +43,8 @@ function MusicPlayer({
       <p className="text-white text-lg font-semibold mt-3 capitalize">
         {artist}
       </p>
-      <p className="text-green-400 capitalize"> {title}</p>
-      <p className="text-red-800 text-lg">
+      <p className="text-green-400 capitalize text-lg"> {title}</p>
+      <p className="text-red-800 text-base">
         {songProgress} / {songDuration}
       </p>
       <MusicControllers

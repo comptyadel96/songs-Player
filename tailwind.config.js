@@ -25,6 +25,7 @@ module.exports = {
         700: "#926639",
       },
       glass: "rgba(255, 255, 255,0.17)",
+      glass2: "rgba(255, 255, 255,0.22)",
       gold: "#ffca31",
       black: colors.black,
       white: colors.white,
@@ -166,6 +167,7 @@ module.exports = {
     borderWidth: {
       DEFAULT: "1px",
       0: "0px",
+      1: "0.5px",
       2: "2px",
       4: "4px",
       8: "8px",
