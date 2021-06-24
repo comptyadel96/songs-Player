@@ -52,7 +52,7 @@ function App() {
   }
 
   return (
-    <div className="w-full h-screen items-center flex bg-maroon-100 flex-wrap ">
+    <div className="w-full h-screen items-center flex bg-gradient-to-b from-green-400 via-black to-gray-600 ">
       <MusicPlayer
         title={currentSong.title}
         artist={currentSong.artist}
