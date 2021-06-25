@@ -24,7 +24,7 @@ function MusicControllers({
   }
 
   return (
-    <div className="w-72 mt-3 bg-black h-9 flex justify-between items-center px-3">
+    <div className="w-72 mt-3  h-9 flex justify-between items-center px-3">
       {showPrevAndNext && (
         <AiFillFastBackward
           style={iconsStyle}
@@ -33,23 +33,26 @@ function MusicControllers({
           onClick={playPreviousSong}
         />
       )}
-      <div onClick={toggleIcon}>
-        {!paused ? (
-          <AiFillCaretRight
-            style={iconsStyle}
-            size={28}
-            onClick={onPlay}
-            className="hover:bg-glass rounded-full w-8 h-8"
-          />
-        ) : (
-          <BiPauseCircle
-            style={iconsStyle}
-            size={28}
-            onClick={onPause}
-            className="hover:bg-glass rounded-full w-8 h-8 p-1"
-          />
-        )}
-      </div>
+
+      {showPrevAndNext && (
+        <div onClick={toggleIcon}>
+          {!paused ? (
+            <AiFillCaretRight
+              style={iconsStyle}
+              size={28}
+              onClick={onPlay}
+              className="hover:bg-glass rounded-full w-8 h-8"
+            />
+          ) : (
+            <BiPauseCircle
+              style={iconsStyle}
+              size={48}
+              onClick={onPause}
+              className="hover:bg-glass rounded-full w-8 h-8 "
+            />
+          )}
+        </div>
+      )}
 
       {showPrevAndNext && (
         <AiFillFastForward
