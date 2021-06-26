@@ -11,12 +11,11 @@ function App() {
           background: "url(/images/casque.jpeg)",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
-          mixBlendMode: "darken",
         }}>
         <Navbar />
       </div>
 
-      <p className="  absolute top-24  text-2xl  mix-blend-luminosity  md:top-8 md:left-2 text-white md:text-4xl font-semibold ">
+      <p className=" mix-blend-luminosity absolute top-24  text-2xl   md:top-8 md:right-2 text-white md:text-4xl font-semibold ">
         Compty's player 🎼
       </p>
       <svg
