@@ -6,6 +6,7 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     screens: {
+      xs:"300px",
       sm: "640px",
       md: "768px",
       lg: "1024px",
@@ -564,7 +565,6 @@ module.exports = {
       "6xl": "72rem",
       "7xl": "80rem",
       full: "100%",
-      svgfull:"300%",
       min: "min-content",
       max: "max-content",
       prose: "65ch",
@@ -572,6 +572,7 @@ module.exports = {
     }),
     minHeight: {
       0: "0px",
+      72: "14rem",
       full: "100%",
       screen: "100vh",
     },

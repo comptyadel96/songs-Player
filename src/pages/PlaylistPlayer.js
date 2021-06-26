@@ -21,7 +21,7 @@ function PlaylistPlayer() {
       : setCurrentSongIndex(songs.length - 1)
   }
   return (
-    <div className="z-10 mt-5 mx-3  bg-gradient-to-b from-greenglass to-black border-none p-8 rounded-lg ">
+    <div className="z-10 mt-5  md:mx-3   md:w-1/2  md:h-auto md:opacity-90 flex items-center   md:bg-gradient-to-b xs:w-full from-greenglass to-black border-none md:p-8 rounded-lg  ">
       <MusicPlayer
         title={currentSong.title}
         artist={currentSong.artist}

@@ -11,8 +11,6 @@ function MusicPlayer({
   audio,
   playNextSong,
   playPreviousSong,
-  showPrevAndNext = true,
-  showProgressBar = true,
 }) {
   const audioRef = useRef(null)
   const [songDuration, setSongDuration] = useState()
@@ -49,36 +47,37 @@ function MusicPlayer({
   }
 
   return (
-    <div className="w-96 h-80  bg-gray-800  flex flex-col items-center rounded-lg m-3  ">
+    <div className="max-w-md mx-auto my-2  w-2/3 md:h-auto  xs:w-full  bg-gray-800  flex flex-col items-center justify-between rounded-lg  relative ">
       <img
         alt="artist cover"
         src={photo}
-        className="rounded-full w-28 h-28 mt-2"
+        className="rounded-full w-32 h-32 mt-2 md:w-3/5 md:rounded-lg md:h-full "
       />
       <p className="text-white text-lg font-semibold mt-3 capitalize">
         {artist}
       </p>
       <p className="text-green-400 capitalize text-lg"> {title}</p>
+
       <p className="text-red-800 text-base">
         {songProgress} / {songDuration}
       </p>
+
       {/* song progress bar  */}
-      {showProgressBar && (
-        <div className=" w-56 mt-1 ">
-          <ProgressBar
-            completed={songBarProgress}
-            isLabelVisible={false}
-            bgColor="crimson"
-            height="8px"
-            transitionDuration="500"
-          />
-        </div>
-      )}
+
+      <div className=" w-2/3 mt-1 overflow-hidden rounded-lg bg-red-700 ">
+        <ProgressBar
+          completed={songBarProgress}
+          isLabelVisible={false}
+          bgColor="crimson"
+          height="8px"
+          transitionDuration="500"
+        />
+      </div>
 
       {/* volume controller */}
-      <div className="my-3 flex items-center justify-between  w-28">
-        <BsFillVolumeUpFill size={26} />{" "}
-        <VolumeSlider onChange={volume=>handleVolume(volume)} />
+
+      <div className="my-3  absolute left-1 bottom-12   w-10">
+        <VolumeSlider onChange={(volume) => handleVolume(volume)} />
       </div>
 
       <MusicControllers
@@ -86,7 +85,6 @@ function MusicPlayer({
         playPreviousSong={playPreviousSong}
         onPause={pauseAudio}
         onPlay={playAudio}
-        showPrevAndNext={showPrevAndNext}
       />
       <audio
         src={audio}

@@ -16,7 +16,7 @@ function MusicControllers({
   const [paused, setPaused] = useState(false)
   const iconsStyle = {
     color: "white",
-    size: 32,
+    margin: "0 2px",
   }
 
   const toggleIcon = () => {
@@ -24,44 +24,36 @@ function MusicControllers({
   }
 
   return (
-    <div className="w-72 mt-3  h-9 flex justify-between items-center px-3">
-      {showPrevAndNext && (
-        <AiFillFastBackward
-          style={iconsStyle}
-          size={26}
-          className="hover:bg-glass rounded-full w-8"
-          onClick={playPreviousSong}
-        />
-      )}
+    <div className=" mt-3 w-full flex justify-between items-center px-3  ">
+      <AiFillFastBackward
+        style={iconsStyle}
+        size={26}
+        className="hover:bg-glass rounded-full w-8"
+        onClick={playPreviousSong}
+      />
 
-      {showPrevAndNext && (
-        <div onClick={toggleIcon}>
-          {!paused ? (
-            <AiFillCaretRight
-              style={iconsStyle}
-              size={28}
-              onClick={onPlay}
-              className="hover:bg-glass rounded-full w-8 h-8"
-            />
-          ) : (
-            <BiPauseCircle
-              style={iconsStyle}
-              size={48}
-              onClick={onPause}
-              className="hover:bg-glass rounded-full w-8 h-8 "
-            />
-          )}
-        </div>
-      )}
+      <div onClick={toggleIcon}>
+        {!paused ? (
+          <AiFillCaretRight
+            style={iconsStyle}
+            onClick={onPlay}
+            className="hover:bg-glass rounded-full w-8 h-8"
+          />
+        ) : (
+          <BiPauseCircle
+            style={iconsStyle}
+            onClick={onPause}
+            className="hover:bg-glass rounded-full w-8 h-8 "
+          />
+        )}
+      </div>
 
-      {showPrevAndNext && (
-        <AiFillFastForward
-          style={iconsStyle}
-          size={26}
-          className="hover:bg-glass rounded-full w-8"
-          onClick={playNextSong}
-        />
-      )}
+      <AiFillFastForward
+        style={iconsStyle}
+        size={26}
+        className="hover:bg-glass rounded-full w-8"
+        onClick={playNextSong}
+      />
     </div>
   )
 }
