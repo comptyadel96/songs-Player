@@ -24,7 +24,7 @@ function Navbar() {
       {/* about container */}
       <div
         ref={aboutRef}
-        className="w-0 z-9999 overflow-x-hidden absolute h-full left-0  top-0 bg-gradient-to-l from-glass pt-10 transition-all duration-700">
+        className="w-0 z-9999 overflow-x-hidden absolute h-full left-0  top-0 bg-black  md:bg-gradient-to-l from-glass pt-10 transition-all duration-700">
         <GrClose
           className="absolute top-1 right-1 z-10 bg-red-600  cursor-pointer"
           onClick={closeInfos}
