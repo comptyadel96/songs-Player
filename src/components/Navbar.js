@@ -29,9 +29,8 @@ function Navbar() {
           className="absolute top-1 right-1 z-10 bg-red-600  cursor-pointer"
           onClick={closeInfos}
         />
-        <p className="text-3xl text-white text-center">infos</p>
         <p className="text-white ml-6 mt-4">
-          well, this project is just for fun 😄  Lorem ipsum, dolor sit amet
+          well, this project is just for fun 😄 Lorem ipsum, dolor sit amet
           consectetur adipisicing elit. Minus voluptatem maxime itaque dolor,
           placeat ex beatae voluptates, ab iure enim sit totam labore!
           Consequuntur impedit reprehenderit aspernatur sapiente. Cum, illo?
