@@ -6,13 +6,7 @@ import {
 } from "react-icons/ai"
 import { BiPauseCircle } from "react-icons/bi"
 
-function MusicControllers({
-  playNextSong,
-  playPreviousSong,
-  onPlay,
-  onPause,
-  showPrevAndNext = true,
-}) {
+function MusicControllers({ playNextSong, playPreviousSong, onPlay, onPause }) {
   const [paused, setPaused] = useState(false)
   const iconsStyle = {
     color: "white",

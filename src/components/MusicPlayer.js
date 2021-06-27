@@ -3,7 +3,7 @@ import MusicControllers from "./MusicControllers"
 import moment from "moment"
 import ProgressBar from "@ramonak/react-progress-bar"
 import VolumeSlider from "./VolumeSlider"
-import { BsFillVolumeUpFill } from "react-icons/bs"
+
 function MusicPlayer({
   photo,
   artist,
@@ -94,8 +94,9 @@ function MusicPlayer({
         onEnded={playNextSong}
         onError={() =>
           alert("an unexpected error has occured please try again later")
-        }
-      />
+        }>
+        your browser dont support mp3 format ...sorry about that .
+      </audio>
     </div>
   )
 }
